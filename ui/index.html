@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Assignment Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>🏫 Roomies Tool 🛏️</h1>
+
+        <div id="upload-section"  class="upload-section">
+            <h2>1. Upload Spreadsheet</h2>
+            <input type="file" id="fileInput" accept=".xlsx,.xls" />
+            <p class="help-text">Excel file with columns: Name, Category, Choice1, Choice2, ..., Avoid1, Avoid2, ...</p>
+        </div>
+
+        <div id="config-section" class="config-section" >
+            <h2>2. Configure</h2>
+            <label>
+                Event Name:
+                <input type="text" id="eventName" value="Room Assignments" placeholder="e.g., Spring 2025 Retreat"
+                    style="width: 300px;" />
+            </label>
+            <label>
+                Max Room Size:
+                <input type="number" id="roomSize" value="4" min="2" max="10" />
+            </label>
+            <label>
+                Iterations:
+                <input type="number" id="iterations" value="50000" min="1000" max="500000" step="1000" />
+            </label>
+        </div>
+
+        <div id="action-section"  class="action-section">
+            <button id="solveBtn" disabled>Solve Room Assignments</button>
+            <button id="stopBtn" style="display: none; background: #dc3545;">Stop Search</button>
+        </div>
+
+        <div id="progress" class="progress-section" style="display: none;">
+            <h2>Processing...</h2>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill"></div>
+            </div>
+            <p id="progressText">Starting...</p>
+        </div>
+
+        <div id="results" class="results-section" style="display: none;">
+            <div id="resultsSummary" class="summary"></div>
+            <div id="resultsDetail" class="detail"></div>
+            <div class="button-group">
+                <button id="downloadBtn">Download Results</button>
+                <button id="runAgainBtn" style="background: #242a32;">Run Again</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
