@@ -1,6 +1,6 @@
 # 🏨 Roomies Program Documentation
 
-A program designed to optimize grouping people, originally for assigning hotel rooms with occupants who know and tolerate each other.
+A program designed to optimize grouping people, originally for assigning hotel rooms with occupants who know and tolerate each other. Get it [here](https://github.com/phitaylr/roomies/releases/) for MacOS and Windows.
 
 ---
 
